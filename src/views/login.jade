@@ -1,6 +1,6 @@
 extends ./base.jade
 block append style
-    link(rel="stylesheet", type="text/css", href="/assets/style.css")
+  link(rel="stylesheet", type="text/css", href="/assets/style.css")
 block body
   nav
     a(href="/login")
@@ -15,7 +15,7 @@ block body
       input#user(type="text", name="username", placeholder="username")
       label(for="pass") Password: 
       input#pass(type="password", name="pass", placeholder="password")
-	  input(type="hidden", name="_csrf", value="#{csrfToken}")
+      input(type="hidden", name="_csrf", value="#{csrfToken}")
       a#loginSubmit(class="formSubmit", href="#") Sign in
   #domoMessage
     img#speech(src="/assets/img/speech.png", alt="speech box")
@@ -23,4 +23,4 @@ block body
       span#errorMessage Wrong username or password
     img#domo(src="assets/img/domo.png", alt="domo")
 block scripts
-    script(src="/assets/client.js")
+  script(src="/assets/client.js")

@@ -68,10 +68,12 @@ app.use(cookieParser());
 //should come BEFORE the router
 app.use(csrf());
 app.use(function (err, req, res, next){
-	if(err.code !== 'EBADCSRFTOKEN') return next(err)
+	if(err.code !== 'EBADCSRFTOKEN'){
+		return next(err);
+	}
 	
 	return;
-})
+});
 
 router(app);
 
